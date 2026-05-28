@@ -93,9 +93,9 @@ npm run build
 
 Create a new Render Web Service from this repository.
 
-- Root directory: `server`
-- Build command: `npm install && npm run build`
-- Start command: `npm start`
+- Root directory: repository root
+- Build command: `npm install && npm --workspace shared run build && npm --workspace server run build`
+- Start command: `npm --workspace server start`
 - Environment variables:
   - `PORT`: Render sets this automatically
   - `NODE_ENV=production`
@@ -111,9 +111,9 @@ wss://rentz-by-domnul-dan.onrender.com
 
 Create a new Vercel project from this repository.
 
-- Root directory: `client`
-- Build command: `npm install && npm run build`
-- Output directory: `dist`
+- Root directory: repository root
+- Build command: `npm install && npm --workspace shared run build && npm --workspace client run build`
+- Output directory: `client/dist`
 - Environment variables:
   - `VITE_WS_URL=wss://your-render-service.onrender.com`
 
