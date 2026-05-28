@@ -89,6 +89,8 @@ npm run build
 
 ## Deployment
 
+This repository includes `vercel.json` for the frontend and `render.yaml` for the backend.
+
 ### Backend on Render
 
 Create a new Render Web Service from this repository.

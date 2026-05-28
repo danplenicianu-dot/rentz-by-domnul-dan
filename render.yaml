@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rentz-by-domnul-dan-server
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm --workspace shared run build && npm --workspace server run build
+    startCommand: npm --workspace server start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        sync: false
